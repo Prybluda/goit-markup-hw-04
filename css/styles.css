@@ -7,6 +7,7 @@
     --iris-cl: #4d5ae5;
     --hover-focus-cl: #404bbf;
     --cloud-cl: #F4F4FD;
+    --lg-grey: rgba(46, 47, 66, 0.70);
 }
 
 *,
@@ -35,12 +36,12 @@ ul,ol {
     margin: 0;
     padding: 0;
 }
-  
-/* header*/
-
+ 
 button{
     cursor: pointer;
 }
+
+/* header*/
 
 .container{
     width: 1158px;
@@ -85,7 +86,7 @@ button{
     color: var(--navyblue-cl);
 }
 
-.header.list {
+.header-list {
 display: flex;
     align-items: center;
     gap: 40px;
@@ -111,40 +112,47 @@ color: var(--hover-focus-cl)
 address {
     font-style: normal;
 }
-.address.list {
+.address-list {
     display: flex;
         align-items: center;
         gap: 40px;
 }
 
-.address.link {
+.address-link {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--slate-cl);
 }
 
-.address.link:hover,
-.address.link:focus {
+.address-link:hover,
+.address-link:focus {
     color: var(--hover-focus-cl);
 }
 
 /* section one*/
 
 .one {
+    max-width: 1440px;
+    margin: 0 auto;
     background: var(--navyblue-cl);
     padding-top: 188px;
     padding-bottom: 188px;
-   
+     background-image: linear-gradient(var(--lg-grey), var(--lg-grey)),
+     url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
 }
 
 .section.one{
-    text-align: center;
+   
 }
 .one-title {
         text-align: center;
         font-weight: 700;
         font-size: 56px;
-        line-height: 1.07;
+        line-height: 60px;
         letter-spacing: 0.02em;
         color: var(--white-cl);
         max-width: 496px;
@@ -189,6 +197,15 @@ address {
     justify-content: center;
     gap: 24px;
 }
+.icons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    background-color: var(--cloud-cl)
+}
 
 .two-title {
         font-weight: 500;
@@ -200,8 +217,13 @@ address {
 }
 
 .two-item{
+   
     width: calc((100% - 3*24px) / 4);
     
+}
+
+.two-icon {
+  
 }
 
 .two-text {
@@ -270,6 +292,9 @@ address {
     width: calc((100% - 3 * 24px) / 4);
         border-radius: 0px 0px 4px 4px;
     background-color: var(--white-cl);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+      0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .four-item{
@@ -291,7 +316,86 @@ address {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color:var(--slate-cl);
+    margin-bottom: 8px;
    }
+
+   .social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+   }
+
+   .social-item {
+    background-color: var(--iris-cl);
+    border-radius: 50%;
+   }
+
+   .social-link {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    width: 40px;
+        height: 40px;
+   }
+ .social-link:hover{
+    background-color: var(--hover-focus-cl);
+    border-radius: 50%;
+ }
+   .socila-icon {}
+
+   /* customers */
+
+
+.customers {
+    padding: 120px 0;
+}
+
+
+
+.customers-title {
+    margin-bottom: 72px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        text-transform: capitalize;
+        letter-spacing: 0.02em;
+        color: var(--navyblue-cl);
+}
+
+.customers-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+      
+}
+
+
+
+.customers-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 88px;
+    
+
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+}
+
+.customers-link:hover{
+    border-color: var(--hover-focus-cl);
+}
+ .customers-link:hover .customers-icon{
+fill: var(--hover-focus-cl);
+ }
+
+
+
+
 /*section5*/
 
 .five {
@@ -371,9 +475,18 @@ gap: 48px 24px;
 /* footer*/
 
 .footer {
+    display: flex;
     padding-top: 100px;
         padding-bottom: 100px;
     background: var(--navyblue-cl);
+}
+
+.footer-box{
+    display: flex;
+}
+
+.footer-container{
+    margin-right: 120px;
 }
 
 .footer-logo {
@@ -398,3 +511,36 @@ gap: 48px 24px;
     letter-spacing: 0.02em;
     color: var(--cloud-cl);
     }
+
+   
+
+    .media-title{
+        color: var(--white-cl);
+font-size: 16px;
+     font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    margin-bottom: 16px;
+    }
+    
+    .media-list{
+        display: flex;
+        
+       gap: 16px;
+           }
+.media-item{
+    background-color: var(--iris-cl);
+        border-radius: 50%;
+}
+           .media-link{
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+        }
+       
+.media-link:hover{
+    background-color: #31D0AA;
+      border-radius: 50%;
+}
