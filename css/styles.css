@@ -118,7 +118,7 @@ color: var(--hover-focus-cl)
 .header-link.active::after{
     content: '';
     position: absolute;
-    bottom: 1px;
+    bottom: -1px;
     left: 0;
 
     display: block;
@@ -317,7 +317,7 @@ address {
 }
 
 .four-item{
-    padding: 32px 16px;
+    padding: 32px 0;
 }
 
 .four-name {
@@ -362,7 +362,6 @@ address {
  .social-link:hover,
  .social-link:focus{
     background-color: var(--hover-focus-cl);
-    border-radius: 50%;
  }
    .socila-icon {
     fill: var(--cloud-cl); 
@@ -608,8 +607,6 @@ width: calc(100%-2*24px)/3;
 }
 
 .media-item{
-    background-color: var(--iris-cl);
-        border-radius: 50%;
 }
 
 .media-link{
@@ -618,11 +615,17 @@ width: calc(100%-2*24px)/3;
     align-items: center;
     width: 40px;
     height: 40px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    
+    background-color: var(--iris-cl);
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),  
+}
+
+.media-icon{
+    fill: var(--cloud-cl);
 }
        
-.media-link:hover{
+.media-link:hover,
+.media-link:focus{
     background-color: #31D0AA;
       border-radius: 50%;
 }
