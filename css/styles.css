@@ -684,7 +684,7 @@ width: calc(100%-2*24px)/3;
 }
 
 .backdrop.is-hidden .modal {
-    opacity: 0;
+    /* opacity: 0; */
    
 }
 
